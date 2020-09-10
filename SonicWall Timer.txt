@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         SonicWall Redirect
+// @name         SonicWall Timer
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  After the logoout, this will redirect you back to the login page.
+// @description  This script will automatically log you out after 88 minutes.
 // @author       You
-// @match        http://10.20.51.1/dynLoggedOut.html?didLogout=yes
+// @match        http://10.20.51.1/dynUserLogin.html
 // @grant        none
 // ==/UserScript==
 
 (function() {
-    'use strict';
-setInterval(() => {window.location.replace("https://10.20.51.1/auth.html");}, 500)
+    var time = 5.28 * Math.pow(10, 6)
+    setInterval(() => {window.location.replace("https://10.20.51.1/auth.html");}, time)
 })();
