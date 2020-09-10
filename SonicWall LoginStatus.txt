@@ -1,0 +1,24 @@
+// ==UserScript==
+// @name         SonicWall login status
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Closes page
+// @author       You
+// @match        http://10.20.51.1/dynLoginStatus.html?1stLoad=yes
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    var time = 5.28 * Math.pow(10, 6)
+    setInterval(interval, time)
+    function interval(){
+    var node = document.querySelector('[title="Logout from SonicWall"]');
+window.onunload = null
+    window.onbeforeunload = null;
+node.click();
+    window.onunload = null
+    }
+
+    // Your code here...
+})();
