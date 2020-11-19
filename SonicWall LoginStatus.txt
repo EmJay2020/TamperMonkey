@@ -5,20 +5,32 @@
 // @description  Closes page
 // @author       You
 // @match        http://10.20.51.1/dynLoginStatus.html?1stLoad=yes
-// @grant        none
+// @require      http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js
+// @grant GM_setValue
+// @grant GM_getValue
+// @grant unsafeWindow
+// @grant window.close
+// @grant window.focus
+// @grant window.onurlchange
+// @run-at document-body
 // ==/UserScript==
-
+var $ = unsafeWindow.jQuery;
 (function() {
-    'use strict';
-    var time = 5.28 * Math.pow(10, 6)
-    setInterval(interval, time)
-    function interval(){
-    var node = document.querySelector('[title="Logout from SonicWall"]');
-window.onunload = null
-    window.onbeforeunload = null;
-node.click();
-    window.onunload = null
-    }
-
-    // Your code here...
-})();
+unsafeWindow.minsLeft = 0;
+unsafeWindow.okToClose = true;
+unsafeWindow.tickCount = 0;
+unsafeWindow.rClickDisabled = false;
+unsafeWindow.ignoreUnload = true;
+$(top).bind('unload');
+$(window).bind('unload');
+$(top).unbind('beforeunload');
+setInterval(() => {window.location.reload(true)}, 40000)
+var x = unsafeWindow.userLoginTime;
+if(x === 88){
+      $(top).bind('unload');
+      $(window).bind('unload');
+      $(top).unbind('beforeunload');
+      unsafeWindow.doUsrLogout();
+      unsafeWindow.goAuthPage();
+  }
+ })();

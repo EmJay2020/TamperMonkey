@@ -2,13 +2,13 @@
 // @name         SonicWall Timer
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  This script will automatically log you out after 88 minutes.
+// @description  This script will automatically log you out.
 // @author       You
 // @match        http://10.20.51.1/dynUserLogin.html
-// @grant        none
+// @grant        window.close
+// @grant        GM_addStyle
 // ==/UserScript==
 
 (function() {
-    var time = 5.28 * Math.pow(10, 6)
-    setInterval(() => {window.location.replace("https://10.20.51.1/auth.html");}, time)
+   setTimeout (window.close, 700);
 })();
