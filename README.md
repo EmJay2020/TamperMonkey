@@ -2,11 +2,11 @@ The purpose of these scripts are to automatically sign you in to SonicWall. This
 
 In order to use these scripts you will need to add the TamperMonkey extension to your browser:
   #### For Chrome: 
-  [](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
+  [Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en)
   #### For Firefox: 
-  [](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
+  [Firefox](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
   #### For Safari: 
-  [](https://www.tampermonkey.net/?browser=safari)
+  [Safari](https://www.tampermonkey.net/?browser=safari)
 
 Then in the upper right hand corner of your browser click on the TamperMonkey icon (it looks like a square with two circles on it). In the dropdown on select "Dashboard". Next create a new script by clicking on the tab with a + sign on it. For each script listed here on GitHub create a new script and just copy my code into TamperMonkey. Once you do that press ctrl + s. The scripts name themselves so you don't need to name them manually. If the scripts are not enabled by default enable them.
 
